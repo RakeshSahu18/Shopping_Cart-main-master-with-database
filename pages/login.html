@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>LETHAL EMOTION Login page</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"
+    />
+    <link rel="stylesheet" href="/css/login.css" />
+  </head>
+  <body>
+    <div id="login-form-wrap">
+      <h2>Login</h2>
+      <form id="login-form" action="/login" method="post">
+        <p>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Email Address"
+            required
+          /><i class="validation"><span></span><span></span></i>
+        </p>
+        <p>
+          <input
+            type="text"
+            id="password"
+            name="password"
+            placeholder="password"
+            required
+          /><i class="validation"><span></span><span></span></i>
+        </p>
+
+        <p>
+          <input type="submit" id="login" value="Login" />
+        </p>
+      </form>
+      <div id="create-account-wrap">
+        <p>Not a member? <a href="./SignUp">Create Account</a></p>
+        <p></p>
+      </div>
+    </div>
+  </body>
+</html>

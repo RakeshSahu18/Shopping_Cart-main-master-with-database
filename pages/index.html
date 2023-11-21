@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LETHAL EMOTION</title>
+    <link rel="stylesheet" href="/src/stlyle.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+  </head>
+
+  <body>
+    <div class="navbar">
+      <button id="logout-button">Logout</button>
+      <a href="./">
+        <h2>LETHAL EMOTION</h2>
+      </a>
+      <a href="./cart">
+        <div class="cart">
+          <i class="bi bi-cart2"></i>
+          <div id="cartAmount" class="cartAmount">0</div>
+        </div>
+      </a>
+    </div>
+    <div class="shop" id="shop"></div>
+  </body>
+  <script src="/src/Data.js"></script>
+  <script src="/src/main.js"></script>
+  <script>
+    const logoutButton = document.getElementById("logout-button");
+
+    logoutButton.addEventListener("click", function () {
+      // Clear cookies by setting their expiration date to the past
+      document.cookie =
+        "email=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+      document.cookie =
+        "password=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+
+      // Redirect to the login page
+      window.location.href = "/";
+    });
+  </script>
+</html>

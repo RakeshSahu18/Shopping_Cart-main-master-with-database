@@ -1,0 +1,319 @@
+/**
+*  ! Changed the default padding margin of the browser 
+**/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.img-h {
+  height: 200px;
+}
+body {
+  font-family: sans-serif;
+}
+
+i {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+/*
+  ! NavBar style 
+*/
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #212529;
+  color: white;
+  padding: 25px 60px;
+  margin-bottom: 30px;
+}
+
+.cart {
+  position: relative;
+  background-color: white;
+  color: #212529;
+  font-size: 35px;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.cartAmount {
+  position: absolute;
+  top: -15px;
+  right: -11px;
+  background-color: red;
+  font-size: 16px;
+  color: white;
+  padding: 3px;
+  border-radius: 3px;
+}
+
+/*
+  ! Shop item style are here 
+ */
+
+.shop {
+  display: grid;
+  grid-template-columns: repeat(4, 223px);
+  gap: 30px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 1000px) {
+  .shop {
+    grid-template-columns: repeat(2, 223px);
+  }
+}
+@media (max-width: 400px) {
+  .shop {
+    grid-template-columns: repeat(1, 223px);
+  }
+}
+
+.item {
+  border: 2px solid #212529;
+  border-radius: 4px;
+}
+.item img {
+  width: 100%;
+  border-radius: 2px 2px 0 0;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  gap: 10px;
+}
+.details p {
+  height: 55px;
+}
+
+.price-quantity {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 9px;
+  font-size: 20px;
+}
+
+/* 
+  icons styles are here
+*/
+
+.bi-dash-lg {
+  color: red;
+}
+.bi-plus-lg {
+  color: green;
+}
+
+.bi-x-lg {
+  color: red;
+  font-weight: bold;
+}
+
+/*
+ ! style rules for label  and buttons 
+*/
+
+.text-center {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.HomeBtn,
+.checkout,
+.removeAll {
+  background-color: #212529;
+  color: white;
+  padding: 6px;
+  border: none;
+  border-radius: 5px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+.checkout {
+  background-color: green;
+}
+.removeAll {
+  background-color: red;
+}
+
+/* 
+ ! style rule for shopping-cart
+*/
+
+.shopping-cart {
+  display: grid;
+  grid-template-columns: repeat(1, 320px);
+  justify-content: center;
+  gap: 15px;
+}
+
+/* 
+  ! style rule for cart-item
+*/
+
+.cart-item {
+  border: 2px solid #212529;
+  border-radius: 4px;
+  display: flex;
+}
+
+.title-price-x {
+  width: 195px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.title-price {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cart-item-price {
+  background-color: #212529;
+  color: white;
+  border-radius: 4px;
+  padding: 3px 6px;
+}
+
+#logout-button {
+  border: none;
+  color: white;
+  padding: 10px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+
+  background-color: #555555;
+  color: black;
+  border: 2px solid #555555;
+  border-radius: 5px;
+}
+
+#logout-button:hover {
+  background-color: rgb(192, 192, 192);
+  color: rgb(0, 0, 0);
+}
+
+/* !checkout stlye */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-transform: capitalize;
+  transition: all 0.2s linear;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px;
+  min-height: 100vh;
+  background: linear-gradient(90deg, #2ecc71 60%, #27ae60 40.1%);
+}
+
+.container form {
+  padding: 20px;
+  width: 700px;
+  background: #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.container form .row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.container form .row .col {
+  flex: 1 1 250px;
+}
+
+.container form .row .col .title {
+  font-size: 20px;
+  color: #333;
+  padding-bottom: 5px;
+  text-transform: uppercase;
+}
+
+.container form .row .col .inputBox {
+  margin: 15px 0;
+}
+
+.container form .row .col .inputBox span {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.container form .row .col .inputBox input {
+  width: 100%;
+  border: 1px solid #ccc;
+  padding: 10px 15px;
+  font-size: 15px;
+  text-transform: none;
+}
+
+.container form .row .col .inputBox input:focus {
+  border: 1px solid #000;
+}
+
+.container form .row .col .flex {
+  display: flex;
+  gap: 15px;
+}
+
+.container form .row .col .flex .inputBox {
+  margin-top: 5px;
+}
+
+.container form .row .col .inputBox img {
+  height: 34px;
+  margin-top: 5px;
+  filter: drop-shadow(0 0 1px #000);
+}
+
+.container form .submit-btn {
+  width: 100%;
+  padding: 12px;
+  font-size: 17px;
+  background: #27ae60;
+  color: #fff;
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+.container form .submit-btn:hover {
+  background: #2ecc71;
+}
