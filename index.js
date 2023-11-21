@@ -133,6 +133,6 @@ app.get("/checkout", (req, res, next) => {
   res.sendFile(path.join(__dirname + "/pages/checkout.html"));
 });
 
-app.listen(3000, () => {
+app.listen(process.env.PORT, () => {
   console.log("The server is working on localhost:3000");
 });
